@@ -1,0 +1,59 @@
+body {
+    font-family: "Droid Sans", serif;
+    margin: 0;
+    color: #32bf68;
+    background-color: white;
+}
+
+header {
+    background-color: #32bf68;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: left;
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+}
+
+
+#map-container {
+    border: 2px blue;
+    height: 500px;
+    min-width: 0;
+    width: 50%;
+}
+
+#info {
+    flex: 1;
+    min-width: 0;
+    width: 50%;
+    background-color: lightyellow;
+}
+
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #32bf68;
+    color: white;
+}
+
