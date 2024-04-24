@@ -1,9 +1,9 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    var map = L.map('mapContainer').setView([60.28, 25], 10);
+    var map = L.map('mapContainer').setView([60.24, 25], 11);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
+        maxZoom: 17,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
