@@ -2,50 +2,128 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opiskelija Ravintolat</title>
+    <title>Where to Eat</title>
     <link rel="stylesheet" href="../CSS/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
           crossorigin=""/>
 
+
 </head>
 <body>
-<header>
-    <section class="hero">
-        <h1 class="logo">Ravintola</h1>
-        <div id="loginButtons">
-            <div>
-                <button id="login">Login</button>
-            </div>
-            <div>
-                <button id="register">Register</button>
-            </div>
+<div class="headerBar">
+    <div class="logoContainer">
+        <h1>WhereToEat</h1>
+    </div>
+    <div class="actionButtons">
+        <button id="signInButton">Log In</button>
+        <button id="signUpButton">Sign Up</button>
+        <button id="profileButton">Profile</button>
+        <button id="signOutButton" style="display: none;">Log Out</button>
+    </div>
+</div>
+
+<div class="centralSection">
+    <button id="searchButton">Search</button>
+    <div id="searchDialog" style="display: none;">
+        <form id="searchForm">
+            <label for="searchField">Restaurant Name: </label>
+            <input type="text" id="searchField" name="search">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</div>
+
+
+<div id="restaurantSection">
+    <div id="mapContainer"></div>
+    <div id="restaurantInfoContainer">
+        <h2 id="restaurantName">Restaurant Name</h2>
+        <p id="restaurantAddress"> Address</p>
+        <div id="menuButtons">
+            <button id="dailyMenuButton">Today's Menu</button>
+            <button id="weeklyMenuButton">Weekly Menu</button>
         </div>
-    </section>
-</header>
+        <div id="menuBox">
+        </div>
+    </div>
+</div>
+<!--
+<dialog id="loginDialog">
+    <form id="loginForm"> <h1>Log In</h1>
+        <div>
+            <label for="usernameField">Username: </label>
+        </div>
+        <div>
+            <input type="text" id="usernameField" name="username">
+        </div>
+        <div>
+            <label for="passwordField">Password: </label>
+        </div>
+        <div>
+            <input type="password" id="passwordField" name="password"> </div>
+        <div>
+            <button type="submit">Log In</button> <button id="openSignUpButton">Sign Up</button>
+            <button id="closeLoginButton">&#9932;</button>
+        </div>
+        <div id="loginErrorMessageContainer"></div>
+    </form>
+</dialog>
 
-<main>
-    <section class="container">
-        <div id="map-container"></div>
+<dialog id="signUpDialog">
+    <form id="signUpForm"> <h1>Sign Up</h1>
+        <div>
+            <label for="rUsernameField">Username: </label>
+        </div>
+        <div>
+            <input type="text" id="rUsernameField" name="username">
+        </div>
+        <div>
+            <label for="rEmailField">Email: </label>
+        </div>
+        <div>
+            <input type="text" id="rEmailField" name="username">
+        </div>
+        <div>
+            <label for="rPasswordField">Password: </label>
+        </div>
+        <div>
+            <input type="password" id="rPasswordField" name="salasana">
+        </div>
+        <div>
+            <label for="rConfirmPasswordField">Confirm Password: </label>
+        </div>
+        <div>
+            <input type="password" id="rConfirmPasswordField" name="confirmSalasana">
+        </div>
+        <div>
+            <button type="submit">Sign Up</button> <button id="switchToLoginButton">Log In</button>
+            <button id="closeSignUpButton">&#9932;</button>
+        </div>
+        <div id="signUpErrorMessageContainer"></div>
+    </form>
+</dialog>
 
-        <div id="info"> Testi </div>
-    </section>
-</main>
 
-<!-- Other HTML code -->
-
-<footer>
-    <section class="footer">
-        <p>© 2024 Ravintola</p>
-    </section>
-</footer>
+<dialog id="profileDialog">
+    <h1>Profile</h1>
+    <div id="profilePictureContainer">
+        <img id="userProfilePicture" src="" alt="Profile Picture">
+        <input type="file" id="profilePictureInputField" accept="image/*">
+    </div>
+    <p>Username</p>
+    <p id="usernameDisplayBox"></p>
+    <p>Favorite Restaurant:</p>
+    <p id="favoriteRestaurantDisplay"></p>
+    <button id="closeProfileButton">&#9932;</button>
+</dialog>
+-->
+<footer> Opiskelija ravintolat 2024 © </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
-<script src="../JS/maps.js"></script>
+<script type="module" src="../JS/maps.js"></script>
+<script type="module" src="../JS/restaurantSearch.js"></script>
 </body>
 </html>
