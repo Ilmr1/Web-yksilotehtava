@@ -25,12 +25,24 @@
 
 <div class="centralSection">
     <button id="searchButton">Search</button>
+    <p id="loginStatus"></p>
     <div id="searchDialog" style="display: none;">
         <form id="searchForm">
             <label for="searchField">Restaurant Name: </label>
             <input type="text" id="searchField" name="search">
             <button type="submit">Search</button>
         </form>
+    </div>
+    <div id="filterContainer">
+        <button id="filterButton">Filter</button>
+        <div class="filterSection">
+            <select id="cityFilter">
+                <option value="">Select city</option>
+            </select>
+            <select id="companyFilter">
+                <option value="">Select company</option>
+            </select>
+        </div>
     </div>
 </div>
 
@@ -48,7 +60,6 @@
         </div>
     </div>
 </div>
-<!--
 <dialog id="loginDialog">
     <form id="loginForm"> <h1>Log In</h1>
         <div>
@@ -76,7 +87,7 @@
             <label for="rUsernameField">Username: </label>
         </div>
         <div>
-            <input type="text" id="rUsernameField" name="username">
+            <input type="text" id="rUsernameField" name="email">
         </div>
         <div>
             <label for="rEmailField">Email: </label>
@@ -91,10 +102,10 @@
             <input type="password" id="rPasswordField" name="salasana">
         </div>
         <div>
-            <label for="rConfirmPasswordField">Confirm Password: </label>
+            <label for="rConfirmPasswordField">ConfirmPassword: </label>
         </div>
         <div>
-            <input type="password" id="rConfirmPasswordField" name="confirmSalasana">
+            <input type="password" id="rConfirmPasswordField" name="confirmPassword">
         </div>
         <div>
             <button type="submit">Sign Up</button> <button id="switchToLoginButton">Log In</button>
@@ -107,23 +118,25 @@
 
 <dialog id="profileDialog">
     <h1>Profile</h1>
-    <div id="profilePictureContainer">
-        <img id="userProfilePicture" src="" alt="Profile Picture">
-        <input type="file" id="profilePictureInputField" accept="image/*">
-    </div>
-    <p>Username</p>
+    <p>Username:</p>
     <p id="usernameDisplayBox"></p>
     <p>Favorite Restaurant:</p>
     <p id="favoriteRestaurantDisplay"></p>
+    <button id="logoutButton">Log Out</button>
     <button id="closeProfileButton">&#9932;</button>
 </dialog>
--->
-<footer> Opiskelija ravintolat 2024 © </footer>
+
+
+
+<footer> Where To Eat 2024 © </footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
 <script type="module" src="../JS/maps.js"></script>
-<script type="module" src="../JS/restaurantSearch.js"></script>
+<script type="module" src="../JS/profile.js"></script>
+<script type="module" src="../JS/login.js"></script>
+<script type="module" src="../JS/signup.js"></script>
+<script type="module" src="../JS/buttonActions.js"></script>
 </body>
 </html>
